@@ -110,7 +110,7 @@ const QUESTIONS = [
 
 export default function Lab() {
   const [selectedCategory, setSelectedCategory] = useState("전체");
-  const [selectedQuestion, setSelectedQuestion] = useState(null);
+  const [selectedQuestion, setSelectedQuestion] = useState<typeof QUESTIONS[number] | null>(null);
 
   const filteredQuestions = selectedCategory === "전체" 
     ? QUESTIONS 
